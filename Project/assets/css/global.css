@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+header, nav, main, footer {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #00509e;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #002244;
+    border-radius: 5px;
+}
+
+.logo {
+    height: 80px; /* Global setting for the logo height */
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+}
+
+.footer-content section {
+    max-width: 300px;
+}
+
+.about-us {
+    text-align: left;
+    margin-right: 40px;
+}
+
+.contact-us {
+    text-align: left;
+}

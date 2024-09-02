@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Password Validation</title>
+    <script>
+        function validatePassword(password) {
+            const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            return re.test(password);
+        }
+
+        function testPassword() {
+            const password = document.getElementById('password').value;
+            if (validatePassword(password)) {
+                alert('Password is valid');
+            } else {
+                alert('Password must be at least 8 characters long and include symbols, uppercase, and lowercase letters.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="testPassword()">Test Password</button>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield Academy - Admin Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../assets/images/logo.png" alt="Institute Logo" class="logo">
+            <h1>CyberShield Academy</h1>
+            <div class="profile">
+                <span id="adminName">Admin Name</span>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <p>First Name: <span id="firstName"></span></p>
+                    <p>Last Name: <span id="lastName"></span></p>
+                    <p>Index No: <span id="indexNo"></span></p>
+                    <p>Date of Birth: <span id="dob"></span></p>
+                </div>
+            </div>
+            <button id="logoutButton">Logout</button>
+        </div>
+    </header>
+    <main>
+        <div class="admin-container">
+            <section class="upload-section">
+                <h2>Upload Material</h2>
+                <form id="uploadForm" method="post" enctype="multipart/form-data">
+                    <label for="course">Course</label>
+                    <select id="course" name="course" required>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                    
+                    <label for="materialType">Material Type</label>
+                    <select id="materialType" name="material_type" required>
+                        <option value="document">Document</option>
+                        <option value="quiz">Quiz</option>
+                        <option value="video">Video</option>
+                    </select>
+                    
+                    <label for="file">File</label>
+                    <input type="file" id="file" name="file" required>
+
+                    <button type="submit">Upload</button>
+                </form>
+                <div id="message"></div>
+            </section>
+            <section class="materials-section">
+                <h2>Uploaded Materials</h2>
+                <div id="materialsList">
+                    <!-- Uploaded materials will be displayed here -->
+                </div>
+            </section>
+        </div>
+        <div class="admin-container">
+            <section class="quiz-section">
+                <h2>Create Quiz</h2>
+                <form id="createQuizForm" method="post" action="create_quiz.php">
+                    <label for="quizCourse">Course</label>
+                    <select id="quizCourse" name="course_id" required>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                    
+                    <label for="quizName">Quiz Name</label>
+                    <input type="text" id="quizName" name="quiz_name" required>
+                    
+                    <label for="quizDescription">Quiz Description</label>
+                    <textarea id="quizDescription" name="quiz_description" required></textarea>
+                    
+                    <button type="submit">Create Quiz</button>
+                </form>
+                <div id="quizMessage"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <section class="about-us">
+                <h3>About Us</h3>
+                <p>We are dedicated to providing top-notch cybersecurity training for financial institutions.</p>
+            </section>
+            <section class="contact-us">
+                <h3>Contact Us</h3>
+                <p>Email: info@cybershieldacademy.com</p>
+                <p>Phone: +123 456 7890</p>
+            </section>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

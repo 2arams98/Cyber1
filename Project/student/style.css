@@ -1,0 +1,119 @@
+/* Global styles remain unchanged */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+}
+
+.logo {
+    height: 80px;
+}
+
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.profile:hover .profile-dropdown {
+    display: block;
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.courses-section {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course-box {
+    width: 45%;  /* Adjusted width to ensure two boxes per row */
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.course-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-height: 200px; /* Limit the height of the images */
+    object-fit: cover;
+}
+
+.course-box h3 {
+    margin-top: 0;
+}
+
+.course-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00509e;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.course-box a:hover {
+    background-color: #002244;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.footer-content section {
+    max-width: 300px;
+}
+
+.about-us {
+    text-align: left;
+    margin-right: 40px;
+}
+
+.contact-us {
+    text-align: left;
+}
